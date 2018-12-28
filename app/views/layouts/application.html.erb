@@ -10,6 +10,32 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light d-flex">
+    <div class="container">
+      <div class="logo">
+        <a class="navbar-brand" href="/">
+          <%= fa_stacked_icon "camera inverse", base: "circle"%>
+          gamergram
+        </a>
+      </div>
+      <div class="m-auto">
+        <form class="form-inline search-form">
+          <input class="form-control mr-sm-2" type="search" placeholder="@search" aria-label="Search">
+        </form>
+      </div>
+      <div class="user-section">
+        <ul class="navbar-nav mr-auto">
+          <a class="nav-link" <%= link_to "New Post", new_post_path %> </a>
+          <a class="nav-link"<%= link_to "Sign up", new_post_path, :class => 'navbar-link'  %></a>
+          <a class="nav-link"<%= link_to "Login", new_post_path, :class => 'navbar-link'  %></a>
+          <a class="nav-link"<%= link_to "Logout", new_post_path, method: :delete, :class => 'navbar-link'  %></a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" style="min-height: 500px;">
     <%= yield %>
+  </main>
   </body>
 </html>
