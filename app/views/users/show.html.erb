@@ -1,0 +1,60 @@
+
+<div class="user-profile">
+  <div class="profile row">
+    <div class="col-md-4 avatar">
+      <div class="wrapper">
+        <img src="https://instagram.fsgn5-1.fna.fbcdn.net/vp/3ef315d2478029b529d3c3f38daadeb3/5C12B330/t51.2885-19/s150x150/21980557_344791629305453_6312020290528346112_n.jpg">
+      </div>
+    </div>
+
+    <div class="col-md-8 basic-info">
+        <h2 class="username"><%= current_user.username %></h2>
+        <h2 class="username"><%= current_user.email %></h2>
+        <a class="edit-profile" href="<%= edit_user_registration_path(current_user) %>">
+          <button>Edit Account</button>
+        </a>
+        <a class="edit-profile" href="<%= edit_user_path(current_user) %>">
+          <button>Edit Profile</button>
+        </a>
+      </div>
+      <ul class="posts">
+        <li><span>12</span> posts</li>
+        <li><span>195</span> followers</li>
+        <li><span>345</span> following</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="user-tabs">
+  <a class="tab active" href="">
+    <i class="fa fa-th"></i>
+    POSTS
+  </a>
+  <a class="tab" href="">
+    <i class="fa fa-tv"></i>
+    IGTV
+  </a>
+  <a class="tab" href="">
+    <i class="fa fa-bookmark"></i>
+    SAVED
+  </a>
+  <a class="tab" href="">
+    <i class="fa fa-tag"></i>
+    TAGGED
+  </a>
+  </div>
+
+  <div class="user-images">
+  <div class="wrapper">
+    <img src="https://regmedia.co.uk/2012/09/10/the_legend_of_zelda_ocarina_of_time_1.jpg">
+  </div>
+  <div class="wrapper">
+    <img src="https://i.kinja-img.com/gawker-media/image/upload/t_original/f0sxcy02cddehsgelwsz.jpg">
+  </div>
+  <div class="wrapper">
+    <img src="https://vignette.wikia.nocookie.net/finalfantasy/images/1/1e/Garnet_White_Mage.jpg/revision/latest?cb=20160702023424">
+  </div>
+</div>
+
+</div>
