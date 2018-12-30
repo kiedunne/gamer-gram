@@ -3,9 +3,13 @@
   <div class="profile row">
     <div class="col-md-4 avatar">
       <div class="wrapper">
+      <% if current_user.avatar.attached? %>
+        <%= image_tag current_user.avatar %>
+      <% else %>
         <img src="https://66.media.tumblr.com/1a9bb7decebe88cf8268748036871814/tumblr_inline_p6pvdkDvGj1sss5ih_500.png">
-      </div>
+      <%end %>
     </div>
+  </div>
 
     <div class="col-md-8 basic-info">
         <h2 class="username"><%= current_user.username %></h2>
@@ -40,16 +44,13 @@
   </a>
   </div>
 
-  <div class="user-images">
-  <div class="wrapper">
-    <img src="https://regmedia.co.uk/2012/09/10/the_legend_of_zelda_ocarina_of_time_1.jpg">
-  </div>
-  <div class="wrapper">
-    <img src="https://i.kinja-img.com/gawker-media/image/upload/t_original/f0sxcy02cddehsgelwsz.jpg">
-  </div>
-  <div class="wrapper">
-    <img src="https://vignette.wikia.nocookie.net/finalfantasy/images/1/1e/Garnet_White_Mage.jpg/revision/latest?cb=20160702023424">
-  </div>
+
+<div class="user-images">
+  <% @posts.each do |post|%>
+    <div class="wrapper">
+      <%=image_tag post.image %>
+    </div>
+  <% end %>
 </div>
 
 </div>
