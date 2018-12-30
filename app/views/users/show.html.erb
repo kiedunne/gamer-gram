@@ -3,8 +3,8 @@
   <div class="profile row">
     <div class="col-md-4 avatar">
       <div class="wrapper">
-      <% if current_user.avatar.attached? %>
-        <%= image_tag current_user.avatar %>
+      <% if @user.avatar.attached? %>
+        <%= image_tag @user.avatar %>
       <% else %>
         <img src="https://66.media.tumblr.com/1a9bb7decebe88cf8268748036871814/tumblr_inline_p6pvdkDvGj1sss5ih_500.png">
       <%end %>
@@ -12,13 +12,13 @@
   </div>
 
     <div class="col-md-8 basic-info">
-        <h2 class="username"><%= current_user.username %></h2>
-        <h2 class="email"><%= current_user.email %></h2>
-        <h2 class="bio"><%= current_user.bio %></h2>
-        <a class="edit-profile" href="<%= edit_user_registration_path(current_user) %>">
+        <h2 class="username"><%= @user.username %></h2>
+        <h2 class="email"><%= @user.email %></h2>
+        <h2 class="bio"><%= @user.bio %></h2>
+        <a class="edit-profile" href="<%= edit_user_registration_path(@user) %>">
           <button>Edit Account</button>
         </a>
-        <a class="edit-profile" href="<%= edit_user_path(current_user) %>">
+        <a class="edit-profile" href="<%= edit_user_path(@user) %>">
           <button>Edit Profile</button>
         </a>
       </div>
