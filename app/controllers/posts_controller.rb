@@ -1,9 +1,13 @@
 class PostsController < ApplicationController
   def create
-    Post.create(post_params)
-    redirect_to root_path
+    @post = Post.create(post_params)
+    if @post.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
-
+  
   def show
     @post = Post.find(params[:id])
   end
